@@ -1,10 +1,9 @@
 import { defineCollection, reference, z } from "astro:content";
-import { youtubeLoader, youtubeSchema } from "./youtube-loader";
+import { youtubeLoader } from "./youtube-loader";
 import { glob } from "astro/loaders";
 
 const videos = defineCollection({
-  loader: youtubeLoader,
-  schema: youtubeSchema,
+  loader: youtubeLoader(),
 });
 
 const announcements = defineCollection({
